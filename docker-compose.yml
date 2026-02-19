@@ -1,0 +1,6 @@
+
+services:
+  frontend:
+    build: ./runrnk-frontend 
+    ports:
+      - "1000:80"
