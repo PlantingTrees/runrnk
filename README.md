@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+# RUNRNK
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+> A competitive running platform where athletes face off against runners of the same rank and battle their way to the top.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Overview
 
-## React Compiler
+**RUNRNK** is a full-stack competitive running application that matches users based on rank tiers:
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+- 🧒 TODDLER  
+- 🚶 WALKER  
+- 🏃 MILER  
+- 👑 UNDEFEATED  
 
-## Expanding the ESLint configuration
+Each matchup allows runners to generate AI-powered routes and compete head-to-head.  
+The first runner to complete their assigned route ranks up.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+RUNRNK gamifies running by introducing progression, competition, and intelligent route generation — giving athletes a clear sense of where they stand.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Key Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+-  AI-powered route generation
+-  Rank-based matchmaking system
+-  Dynamic ranking progression
+-  Custom route selection
+-  Backend-driven competition logic
+-  Tier-based promotion system
+
+---
+
+## Tech Stack
+
+### Frontend
+- React.js
+- Modern component-based architecture
+- Responsive UI design
+
+### Backend
+- Spring Boot
+- RESTful APIs
+- Business logic for match orchestration and ranking
+
+### AI Integration
+- Route generation algorithms
+- Intelligent balancing for competitive fairness
+
+---
+
+## Previews
+
+### Match Dashboard
+<img width="527" height="581" alt="Runrnk dashboard" src="https://github.com/user-attachments/assets/62638678-cecb-4ff8-b1b0-33977b885614" />
+
+### Route Selection
+<img width="418" height="437" alt="Route selection" src="https://github.com/user-attachments/assets/90731627-0fec-436c-84ea-d8dd4e952852" />
+
+### Ranking System
+<img width="370" height="367" alt="Ranking system" src="https://github.com/user-attachments/assets/1063f80f-7b82-4ff8-a215-94be39894898" />
+
+### Competition View
+<img width="419" height="431" alt="Competition view" src="https://github.com/user-attachments/assets/e1346f9e-f3fd-4c00-93e6-5088a02f7701" />
+
+---
+
+## Live Demo
+
+ **RUNRNK Live:**  
+[https://runrnk.netlify.app/]
+
+---
+
+## 🧠 Architecture Overview
+
+RUNRNK follows a full-stack architecture:
+
+- React frontend communicates with Spring Boot backend via REST APIs and websockets.
+- Backend handles:
+  - Matchmaking logic
+  - Rank progression system
+  - Route validation
+  - Competition resolution
+- AI module generates competitive routes dynamically.
+
+---
+
+## Installation & Setup
+
+### Clone the repository
+```bash
+git clone https://github.com/yourusername/runrnk.git
+cd runrnk
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
+## Issues or Bug
 ```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+open a git issue
 ```
