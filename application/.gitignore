@@ -39,3 +39,7 @@ out/
 
 #### APPLE !!! ####
 .DS_Store
+
+
+### .env ###
+.env
