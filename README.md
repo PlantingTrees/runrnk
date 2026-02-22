@@ -8,10 +8,10 @@
 
 **RUNRNK** is a full-stack competitive running application that matches users based on rank tiers:
 
-- 🧒 TODDLER  
-- 🚶 WALKER  
-- 🏃 MILER  
-- 👑 UNDEFEATED  
+-  TODDLER  
+-  WALKER  
+-  MILER  
+-  UNDEFEATED  
 
 Each matchup allows runners to generate AI-powered routes and compete head-to-head.  
 The first runner to complete their assigned route ranks up.
