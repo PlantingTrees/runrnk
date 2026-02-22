@@ -1,0 +1,17 @@
+[[redirects]]
+  from = "/api/*"
+  to = "http://3-22-153-129.sslip.io:8080/api/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ws/*"
+  to = "http://3-22-153-129.sslip.io:8080/ws/:splat"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/ws"
+  to = "http://3-22-153-129.sslip.io:8080/ws"
+  status = 200
+  force = true
